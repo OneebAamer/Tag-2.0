@@ -5,3 +5,4 @@ Required packages:
 - Netcode for GameObjects
 - Authentication
 - Post-Processing
+- com.unity.services.relay
