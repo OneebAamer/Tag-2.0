@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Netcode;
+using System.Collections;
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -20,7 +21,7 @@ public class PlayerMovement : NetworkBehaviour
 
     [Header("Movement")]
     public float gravity = -50f;
-    public float jumpHeight = 4f;
+    public NetworkVariable<float> jumpHeight = new NetworkVariable<float>(4f);
     public float groundDistance = 0.4f;
     public LayerMask groundmask;
 
@@ -330,7 +331,7 @@ public class PlayerMovement : NetworkBehaviour
             coyoteCounter > 0f &&
             !IsSlopeSliding)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(jumpHeight.Value * -2f * gravity);
             coyoteCounter = 0f;
             serverJumpQueued = false;
             serverJumpBufferCounter = 0f;
@@ -355,6 +356,20 @@ public class PlayerMovement : NetworkBehaviour
             Vector3.zero,
             tagPushDecay * Time.deltaTime
         );
+    }
+
+    public void ApplyJumpBoost(float amount, float duration)
+    {
+        if (!IsServer) return;
+
+        StartCoroutine(JumpBoostCoroutine(amount, duration));
+    }
+
+    private IEnumerator JumpBoostCoroutine(float amount, float duration)
+    {
+        jumpHeight.Value += amount;
+        yield return new WaitForSeconds(duration);
+        jumpHeight.Value -= amount;
     }
 
     public void SetHorizontalMomentum(Vector3 worldVelocity)
