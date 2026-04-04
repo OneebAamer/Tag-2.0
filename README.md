@@ -53,6 +53,8 @@ This will open your project directory.
 - Go back to Unity
 - Wait for assets to import and compile
 
+> ⚠️ Compile errors are expected at this stage — do NOT launch in Safe Mode.
+
 Once complete, you’re ready for the next step.
 
 ---
@@ -70,7 +72,7 @@ Ensure the following packages are installed:
 | **TextMeshPro** | Usually included by default. If missing: *Window → Package Manager → Unity Registry → TextMeshPro* |
 | **TMP Essentials** | *Window → TextMeshPro → Import TMP Essentials* |
 | **Input System** | Usually included by default. If missing: *Window → Package Manager → Unity Registry → Input System* |
-| **Input System – Rebinding UI** | *Inside Input System package → Import Rebinding UI* |
+| **Input System – Rebinding UI** | *Inside Input System package → Samples → Import Rebinding UI* |
 | **Netcode for GameObjects** | *Window → Package Manager → Unity Registry → Netcode for GameObjects* |
 | **Authentication** | *Window → Package Manager → Unity Registry → Authentication* |
 | **Post Processing** | *Window → Package Manager → Unity Registry → Post Processing* |
