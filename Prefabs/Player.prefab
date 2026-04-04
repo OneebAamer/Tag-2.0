@@ -264,7 +264,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Shift
+  m_Text: 
 --- !u!1 &475339564122809966
 GameObject:
   m_ObjectHideFlags: 0
@@ -3879,10 +3879,10 @@ MonoBehaviour:
   playerBody: {fileID: 3166566225574995575}
   slideManager: {fileID: 8662097527021801266}
   groundCheck: {fileID: 3166566225493124352}
-  moveAction: {fileID: 3788258839523019337, guid: 063a2e83270b6994fada91fc57a358ea, type: 3}
-  jumpAction: {fileID: 879544524631526088, guid: 063a2e83270b6994fada91fc57a358ea, type: 3}
-  sprintAction: {fileID: -4744047963330888347, guid: 063a2e83270b6994fada91fc57a358ea, type: 3}
-  crouchAction: {fileID: 4116420978942203759, guid: 063a2e83270b6994fada91fc57a358ea, type: 3}
+  moveAction: {fileID: 4053732215274948253, guid: 7dead05c54ca85b4681351aafd8bd03a, type: 3}
+  jumpAction: {fileID: -2099379676528639254, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  sprintAction: {fileID: -7471211009204490832, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  crouchAction: {fileID: 7040659881675835329, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   gravity: -40
   jumpHeight: 2
   groundDistance: 0.4
@@ -11767,7 +11767,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Space
+  m_Text: 
 --- !u!1 &9136177278093085162
 GameObject:
   m_ObjectHideFlags: 0
@@ -11921,4 +11921,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Control
+  m_Text: 

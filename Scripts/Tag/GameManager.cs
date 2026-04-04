@@ -44,7 +44,7 @@ public class GameManager : NetworkBehaviour
     private void Start()
     {
         NetworkObject.DontDestroyWithOwner = true;
-        roundTime = (int)PlayerPrefs.GetFloat("GameTimer");
+        roundTime = (int)PlayerPrefs.GetFloat("GameTimer", 60f);
     }
 
     private void Update()
